@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Chat app</title>
+      <link rel="stylesheet" href="./css/style.css">
+   </head>
+<body>
+   <div class="chat">
+      <div id="chat-clients">
+      </div>
+      <div class="main-content">
+         <ul id="messages"></ul>
+      <form>
+         <input placeholder="message..." required autocomplete="off">
+         <button>click me</button>
+      </form>
+         <button id="location">send location</button>
+      </div>
+   </div>
+                        <!-- JS Scripts -->
+      <script id="sidebar-container" type="text/html">
+         <h2>{{room}}</h2>
+         <span>Users</span>
+         <ul class="users">
+            {{#users}}
+               <li>{{username}}</li>
+            {{/users}}
+         </ul>
+      </script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+      <script src="/js/chat.js"></script>
+</body>
+</html>

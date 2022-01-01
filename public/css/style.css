@@ -1,0 +1,146 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   line-height: 1.4;
+   background-color: #333;
+   font-family: Helvetica, Arial, sans-serif;
+}
+.chat{
+   display: flex;
+}
+/*********** side bar styling ************/
+#chat-clients{
+   height: 100vh;
+   color: #c0c0c0fd;
+   border-right: 1px solid #222;
+   background-color: #202020b0;
+   width: 225px;
+   overflow-y: auto;
+}
+#chat-clients h2 {
+   font-size: 32px;
+   padding: 5px;
+
+   border-bottom: 2px solid #333;
+}
+#chat-clients span {
+   padding: 1px 0 5px 5px;
+   font-size: 26px;
+}
+.users li {
+   padding: 10px;
+   color: #fff;
+   font-size: 20px;
+   transition: .3s;
+}
+.users li:hover{
+   font-size: 22px;
+   background-color: #111;
+   cursor: default;
+}
+/******* Chat main content *****/
+.main-content{
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   max-height: 100vh;
+}
+.main-content ul {
+   flex-grow: 1;
+   padding: 20px;
+   overflow-y: auto;
+}
+/********* MESSAGES *********/
+#myMsg{
+   display: block; 
+   margin: 0 5px 2px auto;
+   padding: 5px 10px;
+   border-radius: 10px;
+   font-size: 20px;
+   color: #aaa;
+   width: fit-content;
+   max-width: 70vh;
+   height: fit-content;
+   background-color: #202020d2;
+}
+#msg{
+   margin: 0 auto 2px 5px;
+   padding: 5px 10px;
+   border-radius: 10px;
+   font-size: 16px;
+   color: #fff;
+   width: fit-content;
+   max-width: 70vh;
+   height: fit-content;
+   background-color: rgba(111, 14, 223, 0.637);
+}
+/*******time of sending ******/
+.timeManager{
+   display: block;
+   text-align: right;
+   color: #000;
+   font-size: 12px;
+
+}
+.timeNotif{
+   display: block;
+   text-align: center;
+   padding-bottom: 2px;
+   color: #000;
+   font-size: 12px;
+
+}
+p{
+   display: block;
+   text-align: center;
+}
+/**********************link *******************/
+ul a{
+   text-decoration: none;
+   padding: 10px;
+   margin-bottom: 2px;
+   color: #aaa;
+   background-color: #022a8091;
+   border-radius: 10px;
+
+}
+/***Typing messages area***/
+form{
+   border-radius: 50px;
+   margin: 10px 0;
+   width: 100%;
+}
+form input{
+   margin: 0;
+   padding: 10px;
+   width: 80%;
+   line-break: inherit;
+   max-height: fit-content;
+   margin-left: 5px;
+}
+form input:focus, button:focus{
+   outline: none;
+   border: 1px solid #156;
+}
+button {
+   cursor: pointer;
+   padding: 12px;
+   background: #7C5CBF;
+   border: none;
+   color: white;
+   font-size: 16px;
+   transition: background .3s ease;
+}
+
+button:hover {
+   background: #6b47b8;
+}
+
+button:disabled {
+   cursor: default;
+   background: #7c5cbf94;
+}
